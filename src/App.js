@@ -18,7 +18,7 @@ function App() {
 
   const handleStart = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/scrape/start", {
+      const response = await fetch("https://bd-scraping-backend-production.up.railway.app/api/scrape/start", {
         method: "POST",
       });
       if (response.ok) {
@@ -35,7 +35,7 @@ function App() {
 
   const handleStop = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/scrape/stop", {
+      const response = await fetch("https://bd-scraping-backend-production.up.railway.app/api/scrape/stop", {
         method: "POST",
       });
       if (response.ok) {
@@ -52,7 +52,7 @@ function App() {
 
   const handleGetData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/scrape/data");
+      const response = await fetch("https://bd-scraping-backend-production.up.railway.app/api/scrape/data");
       if (response.ok) {
         const data = await response.json();
         console.log(data);
